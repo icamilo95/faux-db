@@ -1,0 +1,15 @@
+<h2>Edit or Delete User</h2>
+
+<form action="/users/<%= @user[:id]%>" method="post">
+   <input type="hidden" name="_method" value="put">
+User: <input type="text" name="edited" value="<%= @user[:name]%>">
+   <input type="submit" value="Change" id="">
+</form>
+
+
+<form action="/users/<%= @user[:id]%>" method="post">
+   <input type="hidden" name="_method" value="delete">
+   <input type="submit" name="deleted" value="Delete"> 
+</form>
+
+
